@@ -1,25 +1,238 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Digital ID</title>
+
   <style>
     body {
       margin: 0;
       background: #000;
+      font-family: Arial, Helvetica, sans-serif;
       display: flex;
       justify-content: center;
       align-items: center;
       min-height: 100vh;
+      padding: 20px;
+      box-sizing: border-box;
     }
-    img {
+
+    .card {
+      width: 100%;
+      max-width: 420px;
+      background: #fff;
+      border-radius: 14px;
+      overflow: hidden;
+      box-shadow: 0 0 12px rgba(0,0,0,0.4);
+    }
+
+    .photo-area {
+      background: #0b2b60;
+      padding: 14px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .photo-area img {
       width: 100%;
       height: auto;
-      max-width: 420px;
+      border-radius: 10px;
+      display: block;
+      max-height: 520px;
+      object-fit: contain;
+      background: #fff;
+    }
+
+    .content {
+      padding: 16px 16px 18px;
+      color: #111;
+    }
+
+    .govt {
+      text-align: center;
+      font-weight: 700;
+      font-size: 14px;
+      line-height: 1.4;
+    }
+
+    .govt .kn {
+      font-size: 14px;
+    }
+
+    .divider {
+      height: 1px;
+      background: #ddd;
+      margin: 12px 0;
+    }
+
+    .title {
+      text-align: center;
+      font-size: 18px;
+      font-weight: 800;
+      margin: 6px 0 2px;
+    }
+
+    .sub {
+      text-align: center;
+      font-size: 13px;
+      color: #444;
+      margin-bottom: 10px;
+    }
+
+    .details {
+      font-size: 14px;
+      line-height: 1.7;
+    }
+
+    .row {
+      display: flex;
+      justify-content: space-between;
+      gap: 10px;
+      padding: 6px 0;
+      border-bottom: 1px dashed #e6e6e6;
+      flex-wrap: wrap;
+    }
+
+    .label {
+      font-weight: 700;
+      color: #222;
+      min-width: 130px;
+    }
+
+    .value {
+      color: #000;
+      text-align: right;
+      flex: 1;
+      word-break: break-word;
+    }
+
+    .address {
+      text-align: left;
+      padding-top: 6px;
+      line-height: 1.6;
+    }
+
+    .note {
+      margin-top: 10px;
+      font-size: 12px;
+      color: #555;
+      text-align: center;
     }
   </style>
 </head>
+
 <body>
-  <img src="index.jpeg">
+  <div class="card">
+
+    <!-- PHOTO (unchanged) -->
+    <div class="photo-area">
+      <img src="index.jpeg" alt="Employee Photo">
+    </div>
+
+    <div class="content">
+
+      <!-- GOVT HEADER -->
+      <div class="govt">
+        <div class="kn">ಕರ್ನಾಟಕ ಸರ್ಕಾರ</div>
+        <div>GOVERNMENT OF KARNATAKA</div>
+        <div>MINISTRY OF SKILL DEVELOPMENT, ENTREPRENEURSHIP & LIVELIHOOD</div>
+        <div class="kn">ಕೈಗಾರಿಕಾ ತರಬೇತಿ ಮತ್ತು ಉದ್ಯೋಗ ಇಲಾಖೆ</div>
+        <div>DEPT. OF INDUSTRIAL TRAINING & EMPLOYMENT</div>
+        <div>GOVT. INDUSTRIAL TRAINING INSTITUTE, BALLARI</div>
+      </div>
+
+      <div class="divider"></div>
+
+      <!-- PERSON -->
+      <div class="title">SHIVAKUMARA GOUDA S</div>
+      <div class="sub">JUNIOR TRAINING OFFICER</div>
+
+      <div class="divider"></div>
+
+      <!-- DETAILS -->
+      <div class="details">
+
+        <div class="row">
+          <div class="label">Date of Birth</div>
+          <div class="value">01-08-1988</div>
+        </div>
+
+        <div class="row">
+          <div class="label">KGID No.</div>
+          <div class="value">4262286</div>
+        </div>
+
+        <div class="row">
+          <div class="label">Employee ID</div>
+          <div class="value">0911270907</div>
+        </div>
+
+        <div class="row">
+          <div class="label">Date of Joining</div>
+          <div class="value">01-09-2025</div>
+        </div>
+
+        <div class="row">
+          <div class="label">Aadhaar No.</div>
+          <div class="value">5434 9516 5888</div>
+        </div>
+
+        <div class="row">
+          <div class="label">Blood Group</div>
+          <div class="value">A+ve</div>
+        </div>
+
+        <div class="row">
+          <div class="label">PAN No.</div>
+          <div class="value">DLWPS7276C</div>
+        </div>
+
+        <div class="row">
+          <div class="label">PRAN No.</div>
+          <div class="value">110176417526</div>
+        </div>
+
+        <div class="row">
+          <div class="label">Recipient ID</div>
+          <div class="value">2707562833</div>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="row" style="border-bottom: none;">
+          <div class="label">Residential Address</div>
+          <div class="value address">
+            #21, Near Siddarameshwara Temple Gowdara Oni,<br/>
+            D Nagenahalli, BALLARI Tq. & Dist. - 583117-IT
+          </div>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="row">
+          <div class="label">Mail ID</div>
+          <div class="value">sampigeshivu@gmail.com</div>
+        </div>
+
+        <div class="row">
+          <div class="label">Mobile No.</div>
+          <div class="value">+91 8660439198</div>
+        </div>
+
+        <div class="row" style="border-bottom: none;">
+          <div class="label">Emergency No.</div>
+          <div class="value">+91 93538 74119</div>
+        </div>
+
+        <div class="note">
+          Scan the QR to view this Digital ID (if shared).
+        </div>
+
+      </div>
+    </div>
+
+  </div>
 </body>
 </html>
