@@ -1,238 +1,217 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Digital ID</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ID Profile</title>
 
   <style>
     body {
-      margin: 0;
-      background: #000;
+      margin: auto;
       font-family: Arial, Helvetica, sans-serif;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      min-height: 100vh;
-      padding: 20px;
-      box-sizing: border-box;
+      background:whitesmoke;
+    
     }
 
     .card {
-      width: 100%;
-      max-width: 420px;
-      background: #fff;
-      border-radius: 14px;
-      overflow: hidden;
-      box-shadow: 0 0 12px rgba(0,0,0,0.4);
-    }
-
-    .photo-area {
-      background: #0b2b60;
-      padding: 14px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-
-    .photo-area img {
-      width: 100%;
-      height: auto;
+      width: auto;
+      margin: 30px auto;
+      background:bisque ;
+      box-shadow: 0 0 10px rgba(0,0,0,0.15);
       border-radius: 10px;
-      display: block;
-      max-height: 520px;
-      object-fit: contain;
-      background: #fff;
+      overflow: hidden;
     }
 
+    /* ✅ HEADER (Centered Logo + Kannada + English) */
+    .header {
+      background: linear-gradient( yellow, red);
+      height: 200px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      text-align: center;
+      padding: 10px;
+      box-sizing: border-box;
+    }
+
+    .header-text {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+    }
+
+    .kannada {
+      font-size: 20px;
+      font-weight: bold;
+      letter-spacing: 0.5px;
+    }
+
+    .english {
+      font-size: 18px;
+      font-weight: bold;
+      letter-spacing: 0.5px;
+    }
+
+    .logo {
+      height: 70px;
+      width: auto;
+      display: block;
+    }
+
+    /* ✅ PHOTO BOX */
+    .photo-box {
+      text-align: center;
+      margin-top: -35px;
+    }
+
+    .photo-box img {
+      width: 180px;
+      height: auto;
+      border-radius: 8px;
+      border: 4px solid #ffffff;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      background: white;
+    }
+
+    /* ✅ CONTENT */
     .content {
-      padding: 16px 16px 18px;
+      padding: 20px 40px;
+      text-align: center;
+    }
+
+    .name {
+      font-size: 28px;
+      font-weight: bold;
+      margin-top: 12px;
+      color: #1f3d7a;
+    }
+
+    .kgid {
+      font-size: 18px;
+      margin-bottom: 20px;
+      color: #333;
+    }
+
+    .dept {
+      font-size: 16px;
+      margin: 3px 0;
+      color: #222;
+    }
+
+    hr {
+      margin: 20px 0;
+      border: none;
+      border-top: 1px solid #ccc;
+    }
+
+    /* ✅ DETAILS */
+    .details {
+      text-align:center;
+      max-width: 520px;
+      margin: 0 auto;
+      font-size: 17px;
       color: #111;
     }
 
-    .govt {
-      text-align: center;
-      font-weight: 700;
-      font-size: 14px;
+    .details p {
+      margin: 8px 0;
       line-height: 1.4;
     }
 
-    .govt .kn {
-      font-size: 14px;
-    }
-
-    .divider {
-      height: 1px;
-      background: #ddd;
-      margin: 12px 0;
-    }
-
-    .title {
-      text-align: center;
-      font-size: 18px;
-      font-weight: 800;
-      margin: 6px 0 2px;
-    }
-
-    .sub {
-      text-align: center;
-      font-size: 13px;
-      color: #444;
-      margin-bottom: 10px;
-    }
-
-    .details {
-      font-size: 14px;
-      line-height: 1.7;
-    }
-
-    .row {
-      display: flex;
-      justify-content: space-between;
-      gap: 10px;
-      padding: 6px 0;
-      border-bottom: 1px dashed #e6e6e6;
-      flex-wrap: wrap;
-    }
-
     .label {
-      font-weight: 700;
-      color: #222;
-      min-width: 130px;
+      font-weight: bold;
+      color: #1f3d7a;
     }
 
-    .value {
-      color: #000;
-      text-align: right;
-      flex: 1;
-      word-break: break-word;
-    }
+    /* ✅ Mobile friendly */
+    @media (max-width: 850px) {
+      .card {
+        width: 95%;
+      }
 
-    .address {
-      text-align: left;
-      padding-top: 6px;
-      line-height: 1.6;
-    }
+      .content {
+        padding: 20px;
+      }
 
-    .note {
-      margin-top: 10px;
-      font-size: 12px;
-      color: #555;
-      text-align: center;
+      .details {
+        max-width: 100%;
+      }
     }
   </style>
 </head>
 
 <body>
+
   <div class="card">
 
-    <!-- PHOTO (unchanged) -->
-    <div class="photo-area">
-      <img src="index.jpeg" alt="Employee Photo">
+    <!-- ✅ HEADER -->
+    <div class="header">
+      <div class="header-text">
+        <div class="kannada">ಕರ್ನಾಟಕ ಸರ್ಕಾರ</div>
+
+        <img src="Karnataka.png" class="logo" alt="Karnataka Logo">
+
+        <div class="english">Government of Karnataka</div>
+      </div>
     </div>
 
+    <!-- ✅ PHOTO -->
+    <div class="photo-box">
+      <img src="Shivu-Id.jpeg" alt="Photo">
+    </div>
+
+    <!-- ✅ CONTENT -->
     <div class="content">
 
-      <!-- GOVT HEADER -->
-      <div class="govt">
-        <div class="kn">ಕರ್ನಾಟಕ ಸರ್ಕಾರ</div>
-        <div>GOVERNMENT OF KARNATAKA</div>
-        <div>MINISTRY OF SKILL DEVELOPMENT, ENTREPRENEURSHIP & LIVELIHOOD</div>
-        <div class="kn">ಕೈಗಾರಿಕಾ ತರಬೇತಿ ಮತ್ತು ಉದ್ಯೋಗ ಇಲಾಖೆ</div>
-        <div>DEPT. OF INDUSTRIAL TRAINING & EMPLOYMENT</div>
-        <div>GOVT. INDUSTRIAL TRAINING INSTITUTE, BALLARI</div>
-      </div>
+      <div class="name">SHIVAKUMARA GOUDA S</div>
+      <div class="kgid">KGID No: 4262286</div>
 
-      <div class="divider"></div>
+      <div class="dept">Ministry of Skill Development Entrepreneurship & Livelihood</div>
+      <div class="dept">Department of Industrial Training & Employment</div>
+      <div class="dept">Govt. Industrial Training Institute, Ballari</div>
 
-      <!-- PERSON -->
-      <div class="title">SHIVAKUMARA GOUDA S</div>
-      <div class="sub">JUNIOR TRAINING OFFICER</div>
+      <hr>
 
-      <div class="divider"></div>
-
-      <!-- DETAILS -->
+      <!-- ✅ Details 1 -->
       <div class="details">
+        <p><span class="label">Designation:</span> Junior Training Officer</p>
+        <p><span class="label">DOB:</span> 01-08-1988</p>
+        <p><span class="label">Employee ID:</span> 0911270907</p>
+        <p><span class="label">Date of Joining:</span> 01-09-2025</p>
+        <p><span class="label">Blood Group:</span> A+ve</p>
 
-        <div class="row">
-          <div class="label">Date of Birth</div>
-          <div class="value">01-08-1988</div>
-        </div>
-
-        <div class="row">
-          <div class="label">KGID No.</div>
-          <div class="value">4262286</div>
-        </div>
-
-        <div class="row">
-          <div class="label">Employee ID</div>
-          <div class="value">0911270907</div>
-        </div>
-
-        <div class="row">
-          <div class="label">Date of Joining</div>
-          <div class="value">01-09-2025</div>
-        </div>
-
-        <div class="row">
-          <div class="label">Aadhaar No.</div>
-          <div class="value">5434 9516 5888</div>
-        </div>
-
-        <div class="row">
-          <div class="label">Blood Group</div>
-          <div class="value">A+ve</div>
-        </div>
-
-        <div class="row">
-          <div class="label">PAN No.</div>
-          <div class="value">DLWPS7276C</div>
-        </div>
-
-        <div class="row">
-          <div class="label">PRAN No.</div>
-          <div class="value">110176417526</div>
-        </div>
-
-        <div class="row">
-          <div class="label">Recipient ID</div>
-          <div class="value">2707562833</div>
-        </div>
-
-        <div class="divider"></div>
-
-        <div class="row" style="border-bottom: none;">
-          <div class="label">Residential Address</div>
-          <div class="value address">
-            #21, Near Siddarameshwara Temple Gowdara Oni,<br/>
-            D Nagenahalli, BALLARI Tq. & Dist. - 583117-IT
-          </div>
-        </div>
-
-        <div class="divider"></div>
-
-        <div class="row">
-          <div class="label">Mail ID</div>
-          <div class="value">sampigeshivu@gmail.com</div>
-        </div>
-
-        <div class="row">
-          <div class="label">Mobile No.</div>
-          <div class="value">+91 8660439198</div>
-        </div>
-
-        <div class="row" style="border-bottom: none;">
-          <div class="label">Emergency No.</div>
-          <div class="value">+91 93538 74119</div>
-        </div>
-
-        <div class="note">
-          Scan the QR to view this Digital ID (if shared).
-        </div>
-
+        <p>
+          <span class="label">Address:</span><br>
+          #21, Near Siddarameshwara Temple,<br>
+          Gowdara Oni, D Nagenahalli,<br>
+          Ballari (TQ & Dist) – 583117
+        </p>
       </div>
-    </div>
 
+      <hr>
+
+      <!-- ✅ Details 2 -->
+      <div class="details">
+        <p><span class="label">Aadhaar:</span> 5434 9516 5888</p>
+        <p><span class="label">PAN:</span> DLWPS7276C</p>
+        <p><span class="label">PRAN:</span> 110176417526</p>
+        <p><span class="label">Recipient ID:</span> 2707562833</p>
+      </div>
+
+      <hr>
+
+      <!-- ✅ Details 3 -->
+      <div class="details">
+        <p><span class="label">Mobile:</span> +91 8660439198</p>
+        <p><span class="label">Emergency:</span> +91 9353874119</p>
+        <p><span class="label">Email:</span> sampigeshivu@gmail.com</p>
+      </div>
+
+    </div>
   </div>
+
 </body>
 </html>
