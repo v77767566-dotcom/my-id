@@ -3,20 +3,20 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ID Profile</title>
+  <title>ID PROFILE</title>
 
   <style>
     body {
       margin: auto;
       font-family: Arial, Helvetica, sans-serif;
-      background:whitesmoke;
-    
+      background: whitesmoke;
+      text-transform: uppercase; /* ✅ Makes everything CAPITAL */
     }
 
     .card {
       width: auto;
       margin: 30px auto;
-      background:bisque ;
+      background: bisque;
       box-shadow: 0 0 10px rgba(0,0,0,0.15);
       border-radius: 10px;
       overflow: hidden;
@@ -24,7 +24,7 @@
 
     /* ✅ HEADER (Centered Logo + Kannada + English) */
     .header {
-      background: linear-gradient( yellow, red);
+      background: linear-gradient(yellow, red);
       height: 200px;
       display: flex;
       align-items: center;
@@ -47,6 +47,7 @@
       font-size: 20px;
       font-weight: bold;
       letter-spacing: 0.5px;
+      text-transform: none; /* ✅ Kannada should stay same */
     }
 
     .english {
@@ -109,7 +110,7 @@
 
     /* ✅ DETAILS */
     .details {
-      text-align:center;
+      text-align: center;
       max-width: 520px;
       margin: 0 auto;
       font-size: 17px;
@@ -124,6 +125,13 @@
     .label {
       font-weight: bold;
       color: #1f3d7a;
+    }
+
+    /* ✅ Address style */
+    .address {
+      text-transform: none; /* ✅ Keep address formatting clean */
+      text-align: center;
+      font-size: 16px;
     }
 
     /* ✅ Mobile friendly */
@@ -151,10 +159,8 @@
     <div class="header">
       <div class="header-text">
         <div class="kannada">ಕರ್ನಾಟಕ ಸರ್ಕಾರ</div>
-
         <img src="Karnataka.png" class="logo" alt="Karnataka Logo">
-
-        <div class="english">Government of Karnataka</div>
+        <div class="english">GOVERNMENT OF KARNATAKA</div>
       </div>
     </div>
 
@@ -167,48 +173,53 @@
     <div class="content">
 
       <div class="name">SHIVAKUMARA GOUDA S</div>
-      <div class="kgid">KGID No: 4262286</div>
+      <div class="kgid">KGID NO: 4262286</div>
 
-      <div class="dept">Ministry of Skill Development And Entrepreneurship</div>
-      <div class="dept">Department of Industrial Training & Employment</div>
-      <div class="dept">ಕೈಗಾರಿಕಾ ತರಬೇತಿ ಮತ್ತು ಉದ್ಯೋಗ ಇಲಾಖೆ</div>
-      <div class="dept">Govt. Industrial Training Institute, Ballari</div>
+      <div class="dept">MINISTRY OF SKILL DEVELOPMENT AND ENTREPRENEURSHIP</div>
+      <div class="dept">DEPARTMENT OF INDUSTRIAL TRAINING & EMPLOYMENT</div>
+      <div class="dept" style="text-transform:none;">ಕೈಗಾರಿಕಾ ತರಬೇತಿ ಮತ್ತು ಉದ್ಯೋಗ ಇಲಾಖೆ</div>
+      <div class="dept">GOVERNMENT INDUSTRIAL TRAINING INSTITUTE, BALLARI</div>
 
       <hr>
 
       <!-- ✅ Details 1 -->
       <div class="details">
-        <p><span class="label">Designation:</span> Junior Training Officer</p>
+        <p><span class="label">DESIGNATION:</span> JUNIOR TRAINING OFFICER</p>
         <p><span class="label">DOB:</span> 01-08-1988</p>
-        <p><span class="label">Employee ID:</span> 0911270907</p>
-        <p><span class="label">Date of Joining:</span> 01-09-2025</p>
-        <p><span class="label">Blood Group:</span> A+ve</p>
-
-        <p>
-          <span class="label">Residential Address:</span><br>
-          #21, Near Siddarameshwara Temple,<br>
-          Gowdara Oni, D Nagenahalli,<br>
-          Ballari (TQ & Dist) – 583117
-        </p>
+        <p><span class="label">EMPLOYEE ID:</span> 0911270907</p>
+        <p><span class="label">DATE OF JOINING:</span> 01-09-2025</p>
+        <p><span class="label">BLOOD GROUP:</span> A+VE</p>
       </div>
 
       <hr>
 
       <!-- ✅ Details 2 -->
       <div class="details">
-        <p><span class="label">Aadhaar:</span> 5434 9516 5888</p>
+        <p><span class="label">AADHAAR:</span> 5434 9516 5888</p>
         <p><span class="label">PAN:</span> DLWPS7276C</p>
         <p><span class="label">PRAN:</span> 110176417526</p>
-        <p><span class="label">Recipient ID:</span> 2707562833</p>
+        <p><span class="label">RECIPIENT ID:</span> 2707562833</p>
       </div>
 
       <hr>
 
       <!-- ✅ Details 3 -->
       <div class="details">
-        <p><span class="label">Mobile:</span> +91 8660439198</p>
-        <p><span class="label">Emergency:</span> +91 9353874119</p>
-        <p><span class="label">Email:</span> sampigeshivu@gmail.com</p>
+        <p><span class="label">MOBILE:</span> +91 8660439198</p>
+        <p><span class="label">EMERGENCY:</span> +91 9353874119</p>
+        <p><span class="label">EMAIL:</span> SAMPIGESHIVU@GMAIL.COM</p>
+      </div>
+
+      <hr>
+
+      <!-- ✅ Residential Address moved LAST -->
+      <div class="details address">
+        <p><span class="label">RESIDENTIAL ADDRESS:</span></p>
+        <p>
+          #21, NEAR SIDDARAMESHWARA TEMPLE,<br>
+          GOWDARA ONI, D NAGENAHALLI,<br>
+          BALLARI (TQ & DIST) – 583117
+        </p>
       </div>
 
     </div>
