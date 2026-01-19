@@ -31,10 +31,10 @@
       overflow: hidden;
     }
 
-    /* ✅ HEADER */
+    /* ✅ HEADER (More height to avoid overlap) */
     .header {
       background: linear-gradient(yellow, red);
-      height: 200px;
+      height: 240px; /* ✅ Increased height */
       display: flex;
       align-items: center;
       justify-content: center;
@@ -70,10 +70,10 @@
       display: block;
     }
 
-    /* ✅ PHOTO */
+    /* ✅ PHOTO (less negative margin = no overlap) */
     .photo-box {
       text-align: center;
-      margin-top: -40px;
+      margin-top: -20px; /* ✅ Reduced */
       padding-bottom: 10px;
     }
 
@@ -151,7 +151,7 @@
       }
 
       .header {
-        height: 160px;
+        height: 200px; /* ✅ More space for text */
         padding: 10px;
       }
 
@@ -168,7 +168,7 @@
       }
 
       .photo-box {
-        margin-top: -30px;
+        margin-top: -15px; /* ✅ No overlap */
       }
 
       .photo-box img {
@@ -199,11 +199,15 @@
     /* ✅✅ MOBILE (Normal phones iPhone / Android) */
     @media (max-width: 600px) {
       .header {
-        height: 170px;
+        height: 210px; /* ✅ Increased */
       }
 
       .logo {
         height: 60px;
+      }
+
+      .photo-box {
+        margin-top: -18px; /* ✅ No overlap */
       }
 
       .photo-box img {
@@ -231,12 +235,8 @@
       }
     }
 
-    /* ✅✅ TABLET (iPad / bigger phones landscape) */
+    /* ✅✅ TABLET */
     @media (min-width: 601px) and (max-width: 900px) {
-      .card {
-        max-width: 720px;
-      }
-
       .photo-box img {
         width: 160px;
       }
@@ -261,7 +261,7 @@
       }
 
       .header {
-        height: 220px;
+        height: 260px; /* ✅ Big screens */
       }
 
       .logo {
@@ -345,6 +345,7 @@
 
       <hr>
 
+      <!-- ✅ ADDRESS LAST -->
       <div class="details address">
         <p><span class="label">RESIDENTIAL ADDRESS:</span></p>
         <p>
